@@ -1,0 +1,17 @@
+﻿@model List<MvcEmptyApp.Models.City>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Danh sách thành phố</title>
+</head>
+<body>
+    <h1>Danh sách thành phố Việt Nam</h1>
+    <ul>
+        @foreach (var city in Model)
+        {
+            <li>@city.Name</li>
+        }
+    </ul>
+    <p><a href="/">Quay lại trang chủ</a></p>
+</body>
+</html>

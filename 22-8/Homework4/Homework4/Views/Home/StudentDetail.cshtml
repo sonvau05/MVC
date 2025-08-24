@@ -1,0 +1,21 @@
+﻿@model MvcEmptyApp.Models.Student
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chi tiết sinh viên</title>
+</head>
+<body>
+    <h1>Chi tiết sinh viên</h1>
+    @if (Model != null)
+    {
+        <p>Tên: @Model.Name</p>
+        <p>Tuổi: @Model.Age</p>
+        <p>Chuyên ngành: @Model.Major</p>
+    }
+    else
+    {
+        <p>Không tìm thấy sinh viên!</p>
+    }
+    <p><a href="/aptech/student">Quay lại danh sách</a></p>
+</body>
+</html>

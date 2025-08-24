@@ -1,0 +1,17 @@
+﻿@model List<MvcEmptyApp.Models.Student>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Danh sách sinh viên</title>
+</head>
+<body>
+    <h1>Danh sách sinh viên</h1>
+    <ul>
+        @foreach (var student in Model)
+        {
+            <li><a href="/aptech/student/@student.Id">@student.Name</a></li>
+        }
+    </ul>
+    <p><a href="/aptech">Quay lại Aptech</a></p>
+</body>
+</html>
