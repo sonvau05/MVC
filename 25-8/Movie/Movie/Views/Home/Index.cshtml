@@ -1,0 +1,32 @@
+﻿@model List<MovieApp.Models.Movie>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-4">
+        <h1 class="text-center mb-4">Movie List</h1>
+        <div class="row">
+            @foreach (var movie in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="@movie.ImageUrl" class="card-img-top" alt="@movie.Title">
+                        <div class="card-body">
+                            <h5 class="card-title">@movie.Title</h5>
+                            <p class="card-text">@movie.Description</p>
+                            <p class="card-text"><strong>Price:</strong> $@movie.Price</p>
+                            <p class="card-text"><strong>Director:</strong> @movie.Director</p>
+                            <a href="@movie.TrailerUrl" class="btn btn-info btn-sm">Trailer</a>
+                            <a href="@movie.WatchUrl" class="btn btn-success btn-sm">Watch</a>
+                            <a asp-action="Details" asp-route-id="@movie.Id" class="btn btn-primary btn-sm">Details</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
