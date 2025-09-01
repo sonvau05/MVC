@@ -1,0 +1,28 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/SellerApp/css/site.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ssnGgU5f7D7q5DaeIzV8j9H\u002BxaCHVrDnPdkxlTZfj/c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"83"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ssnGgU5f7D7q5DaeIzV8j9H\u002BxaCHVrDnPdkxlTZfj/c=\u0022"},{"Name":"Last-Modified","Value":"Mon, 01 Sep 2025 09:23:39 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SellerApp/css/site.u8xcr2s01g.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u8xcr2s01g"},{"Name":"integrity","Value":"sha256-ssnGgU5f7D7q5DaeIzV8j9H\u002BxaCHVrDnPdkxlTZfj/c="},{"Name":"label","Value":"_content/SellerApp/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"83"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ssnGgU5f7D7q5DaeIzV8j9H\u002BxaCHVrDnPdkxlTZfj/c=\u0022"},{"Name":"Last-Modified","Value":"Mon, 01 Sep 2025 09:23:39 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SellerApp/images/iphone14.ibj9d1gzih.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\iphone14.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ibj9d1gzih"},{"Name":"integrity","Value":"sha256-8qS3vvodIzr1FdYQKmu\u002BUiyvhInWEMiSJsxNsV01ib4="},{"Name":"label","Value":"_content/SellerApp/images/iphone14.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"208675"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00228qS3vvodIzr1FdYQKmu\u002BUiyvhInWEMiSJsxNsV01ib4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 01 Sep 2025 09:20:34 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SellerApp/images/iphone14.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\iphone14.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-8qS3vvodIzr1FdYQKmu\u002BUiyvhInWEMiSJsxNsV01ib4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"208675"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00228qS3vvodIzr1FdYQKmu\u002BUiyvhInWEMiSJsxNsV01ib4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 01 Sep 2025 09:20:34 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

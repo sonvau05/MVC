@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "Hash": "NBzy4PmtYGOqmIq699lteac4Sq5XZp0XS6x3SOyHw5k=",
+  "Source": "SellerApp",
+  "BasePath": "_content/SellerApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SellerApp\\wwwroot",
+      "Source": "SellerApp",
+      "ContentRoot": "C:\\Users\\LOQ\\Desktop\\28-8\\SellerApp\\SellerApp\\wwwroot\\",
+      "BasePath": "_content/SellerApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\LOQ\\Desktop\\28-8\\SellerApp\\SellerApp\\wwwroot\\css\\site.css",
+      "SourceId": "SellerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LOQ\\Desktop\\28-8\\SellerApp\\SellerApp\\wwwroot\\",
+      "BasePath": "_content/SellerApp",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u8xcr2s01g",
+      "Integrity": "ssnGgU5f7D7q5DaeIzV8j9H+xaCHVrDnPdkxlTZfj/c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\LOQ\\Desktop\\28-8\\SellerApp\\SellerApp\\wwwroot\\images\\iphone14.png",
+      "SourceId": "SellerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LOQ\\Desktop\\28-8\\SellerApp\\SellerApp\\wwwroot\\",
+      "BasePath": "_content/SellerApp",
+      "RelativePath": "images/iphone14#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ibj9d1gzih",
+      "Integrity": "8qS3vvodIzr1FdYQKmu+UiyvhInWEMiSJsxNsV01ib4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\iphone14.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\LOQ\\Desktop\\28-8\\SellerApp\\SellerApp\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "83"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ssnGgU5f7D7q5DaeIzV8j9H+xaCHVrDnPdkxlTZfj/c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 01 Sep 2025 09:23:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ssnGgU5f7D7q5DaeIzV8j9H+xaCHVrDnPdkxlTZfj/c="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.u8xcr2s01g.css",
+      "AssetFile": "C:\\Users\\LOQ\\Desktop\\28-8\\SellerApp\\SellerApp\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "83"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ssnGgU5f7D7q5DaeIzV8j9H+xaCHVrDnPdkxlTZfj/c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 01 Sep 2025 09:23:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u8xcr2s01g"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ssnGgU5f7D7q5DaeIzV8j9H+xaCHVrDnPdkxlTZfj/c="
+        }
+      ]
+    },
+    {
+      "Route": "images/iphone14.ibj9d1gzih.png",
+      "AssetFile": "C:\\Users\\LOQ\\Desktop\\28-8\\SellerApp\\SellerApp\\wwwroot\\images\\iphone14.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "208675"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8qS3vvodIzr1FdYQKmu+UiyvhInWEMiSJsxNsV01ib4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 01 Sep 2025 09:20:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ibj9d1gzih"
+        },
+        {
+          "Name": "label",
+          "Value": "images/iphone14.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8qS3vvodIzr1FdYQKmu+UiyvhInWEMiSJsxNsV01ib4="
+        }
+      ]
+    },
+    {
+      "Route": "images/iphone14.png",
+      "AssetFile": "C:\\Users\\LOQ\\Desktop\\28-8\\SellerApp\\SellerApp\\wwwroot\\images\\iphone14.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "208675"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8qS3vvodIzr1FdYQKmu+UiyvhInWEMiSJsxNsV01ib4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 01 Sep 2025 09:20:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8qS3vvodIzr1FdYQKmu+UiyvhInWEMiSJsxNsV01ib4="
+        }
+      ]
+    }
+  ]
+}
