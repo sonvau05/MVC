@@ -1,0 +1,427 @@
+﻿@model IEnumerable<StudentMarksMvc.Models.Student>
+@{
+    ViewData["Title"] = "Quản lý học sinh";
+    var subjects = ViewBag.Subjects as List<StudentMarksMvc.Models.Subject>;
+}
+
+<h3 class="mb-3">Danh sách học sinh</h3>
+
+<div class="mb-3">
+    <form asp-action="Index" asp-controller="Home" method="get">
+        <div class="input-group">
+            <input type="text" name="search" class="form-control" placeholder="Tìm kiếm theo tên" value="@ViewBag.Search" />
+            <select name="filter" class="form-select">
+                <option value="">Sắp xếp</option>
+                <option value="top" @(ViewBag.Filter == "top" ? "selected" : "")>Điểm cao nhất</option>
+                <option value="low" @(ViewBag.Filter == "low" ? "selected" : "")>Điểm thấp nhất</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Tìm</button>
+        </div>
+    </form>
+</div>
+
+<table class="table table-bordered table-striped text-center align-middle">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Họ tên</th>
+            <th>Lớp</th>
+            @foreach (var subject in subjects)
+            {
+                <th>@subject.Name</th>
+            }
+            <th>Điểm TB</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody id="studentTableBody">
+        @foreach (var s in Model)
+        {
+            var avg = s.Marks.Any() ? s.Marks.Average(m => m.Score) : 0;
+            string color = avg switch
+            {
+                >= 9 => "bg-success",
+                >= 7 => "bg-info",
+                >= 5 => "bg-warning",
+                _ => "bg-danger"
+            };
+
+            <tr id="row-@s.Id">
+                <td>@s.Id</td>
+                <td>@s.FullName</td>
+                <td>@s.Grade</td>
+                @foreach (var subject in subjects)
+                {
+                    var mark = s.Marks.FirstOrDefault(m => m.SubjectId == subject.Id);
+                    <td>@(mark?.Score ?? 0)</td>
+                }
+                <td>
+                    <div class="fw-bold">@avg.ToString("0.0")</div>
+                    <div class="progress" style="height:15px;">
+                        <div class="progress-bar @color" role="progressbar" style="width:@((avg/10.0)*100)%"></div>
+                    </div>
+                </td>
+                <td>
+                    <button class="btn btn-sm btn-warning me-2" onclick="openEditStudent(@s.Id)">Sửa</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteStudent(@s.Id)">Xóa</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-center mt-4">
+    <nav>
+        <ul class="pagination">
+            @if (ViewBag.CurrentPage > 1)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", "Home", new { page = ViewBag.CurrentPage - 1, search = ViewBag.Search, filter = ViewBag.Filter })">Trước</a>
+                </li>
+            }
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                    <a class="page-link" href="@Url.Action("Index", "Home", new { page = i, search = ViewBag.Search, filter = ViewBag.Filter })">@i</a>
+                </li>
+            }
+            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", "Home", new { page = ViewBag.CurrentPage + 1, search = ViewBag.Search, filter = ViewBag.Filter })">Sau</a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-3">
+        <div class="card text-center shadow">
+            <div class="card-body">
+                <h5 class="card-title">Tổng học sinh</h5>
+                <p class="display-6 fw-bold">@ViewBag.TotalStudents</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center shadow">
+            <div class="card-body">
+                <h5 class="card-title">Điểm TB</h5>
+                <p class="display-6 fw-bold">@ViewBag.AverageScore.ToString("0.0")</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center shadow">
+            <div class="card-body">
+                <h5 class="card-title">HS giỏi (>=9)</h5>
+                <p class="display-6 fw-bold">@ViewBag.HighAchievers</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center shadow">
+            <div class="card-body">
+                <h5 class="card-title">HS yếu (&lt;5)</h5>
+                <p class="display-6 fw-bold">@ViewBag.LowCount</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="studentModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 id="studentModalLabel" class="modal-title">Thêm học sinh</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="studentId" />
+                <div class="mb-3">
+                    <label class="form-label">Họ tên</label>
+                    <input type="text" id="fullName" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Lớp</label>
+                    <input type="text" id="grade" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Điểm</label>
+                    <div class="row">
+                        @foreach (var subject in subjects)
+                        {
+                            <div class="col-md-4 mb-2">
+                                <label>@subject.Name</label>
+                                <input type="number" min="0" max="10" step="1" class="form-control mark-input" data-subject="@subject.Id" value="0" />
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button class="btn btn-success" onclick="saveStudent()">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="subjectModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">Quản lý Môn học</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="subjectList" class="list-group mb-3">
+                    @foreach (var sub in subjects)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center" id="subject-@sub.Id">
+                            <span class="subject-name">@sub.Name</span>
+                            <div>
+                                <button class="btn btn-sm btn-warning me-2" onclick="startEditSubject(@sub.Id, '@sub.Name')">Sửa</button>
+                                <button class="btn btn-sm btn-danger" onclick="deleteSubject(@sub.Id)">Xóa</button>
+                            </div>
+                        </li>
+                    }
+                </ul>
+                <div class="input-group">
+                    <input type="text" id="newSubject" class="form-control" placeholder="Môn học mới" />
+                    <button class="btn btn-success" onclick="addSubject()">Thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let editMode = false;
+
+        function openAddStudent() {
+            editMode = false;
+            document.getElementById("studentModalLabel").innerText = "Thêm học sinh";
+            document.getElementById("studentId").value = "";
+            document.getElementById("fullName").value = "";
+            document.getElementById("grade").value = "";
+            document.querySelectorAll(".mark-input").forEach(i => i.value = 0);
+            new bootstrap.Modal(document.getElementById("studentModal")).show();
+        }
+
+        function openEditStudent(id) {
+            editMode = true;
+            document.getElementById("studentModalLabel").innerText = "Sửa học sinh";
+            fetch(`/Students/EditStudentAjax?id=${id}`)
+                .then(r => r.json())
+                .then(data => {
+                    document.getElementById("studentId").value = data.id;
+                    document.getElementById("fullName").value = data.fullName;
+                    document.getElementById("grade").value = data.grade;
+                    document.querySelectorAll(".mark-input").forEach(input => {
+                        let subId = parseInt(input.getAttribute("data-subject"));
+                        let mark = data.marks.find(m => m.subjectId === subId);
+                        input.value = mark ? mark.score : 0;
+                    });
+                    new bootstrap.Modal(document.getElementById("studentModal")).show();
+                });
+        }
+
+        function saveStudent() {
+            let id = document.getElementById("studentId").value;
+            let fullName = document.getElementById("fullName").value.trim();
+            let grade = document.getElementById("grade").value.trim();
+            let marks = [];
+
+            if (!fullName) {
+                Swal.fire("Lỗi", "Tên học sinh không được để trống!", "error");
+                return;
+            }
+
+            if (!grade) {
+                Swal.fire("Lỗi", "Lớp không được để trống!", "error");
+                return;
+            }
+
+            document.querySelectorAll(".mark-input").forEach(input => {
+                let val = parseInt(input.value) || 0;
+                if (val < 0 || val > 10) {
+                    Swal.fire("Lỗi", "Điểm phải từ 0 đến 10!", "error");
+                    throw new Error("Invalid mark");
+                }
+                marks.push({ SubjectId: parseInt(input.getAttribute("data-subject")), Score: val });
+            });
+
+            let payload = {
+                FullName: fullName,
+                Grade: grade,
+                Marks: marks
+            };
+
+            if (editMode) {
+                payload.Id = parseInt(id) || 0;
+            }
+
+            fetch(editMode ? "/Students/EditStudentAjax" : "/Students/CreateStudentAjax", {
+                method: editMode ? "PUT" : "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            })
+            .then(r => {
+                if (!r.ok) throw new Error(`HTTP error! status: ${r.status}`);
+                return r.json();
+            })
+            .then(res => {
+                if (res.success) {
+                    Swal.fire("Thành công", res.message, "success").then(() => location.reload());
+                } else {
+                    Swal.fire("Lỗi", res.message || "Có lỗi xảy ra", "error");
+                }
+            })
+            .catch(error => {
+                Swal.fire("Lỗi", "Không thể kết nối đến server hoặc dữ liệu không hợp lệ!", "error");
+                console.error("Error:", error);
+            });
+        }
+
+        function deleteStudent(id) {
+            Swal.fire({
+                title: "Bạn có chắc chắn?",
+                text: "Học sinh sẽ bị xóa!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Xóa",
+                cancelButtonText: "Hủy"
+            }).then(r => {
+                if (r.isConfirmed) {
+                    fetch(`/Students/DeleteStudentAjax/${id}`, { method: "DELETE" })
+                        .then(r => r.json())
+                        .then(res => {
+                            if (res.success) {
+                                document.getElementById("row-" + id).remove();
+                                Swal.fire("Thành công", "Học sinh đã bị xóa.", "success");
+                            } else {
+                                Swal.fire("Lỗi", res.message || "Xóa thất bại", "error");
+                            }
+                        });
+                }
+            });
+        }
+
+        function startEditSubject(id, name) {
+            const li = document.getElementById(`subject-${id}`);
+            const span = li.querySelector('.subject-name');
+            const div = li.querySelector('div');
+
+            span.outerHTML = `<input type="text" class="form-control subject-name-input" value="${name}" data-id="${id}" />`;
+            div.innerHTML = `
+                <button class="btn btn-sm btn-success me-2" onclick="saveSubject(${id}, '${name}')">Lưu</button>
+                <button class="btn btn-sm btn-secondary me-2" onclick="cancelEditSubject(${id}, '${name}')">Hủy</button>
+                <button class="btn btn-sm btn-danger" onclick="deleteSubject(${id})">Xóa</button>
+            `;
+        }
+
+        function saveSubject(id, originalName) {
+            const li = document.getElementById(`subject-${id}`);
+            const input = li.querySelector('.subject-name-input');
+            const name = input.value.trim();
+            const div = li.querySelector('div');
+
+            if (!name) {
+                Swal.fire("Lỗi", "Tên môn học không được để trống!", "error");
+                return;
+            }
+
+            fetch(`/api/subjects/${id}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ id, name })
+            })
+            .then(r => r.json())
+            .then(res => {
+                if (res.success) {
+                    input.outerHTML = `<span class="subject-name">${name}</span>`;
+                    div.innerHTML = `
+                        <button class="btn btn-sm btn-warning me-2" onclick="startEditSubject(${id}, '${name}')">Sửa</button>
+                        <button class="btn btn-sm btn-danger" onclick="deleteSubject(${id})">Xóa</button>
+                    `;
+                    const idx = [...document.querySelectorAll('thead th')].findIndex(th => th.textContent === originalName);
+                    if (idx !== -1) document.querySelector(`thead th:nth-child(${idx+1})`).textContent = name;
+                    Swal.fire("Thành công", "Môn học đã được cập nhật!", "success");
+                } else {
+                    Swal.fire("Lỗi", res.message || "Cập nhật thất bại", "error");
+                }
+            });
+        }
+
+        function cancelEditSubject(id, name) {
+            const li = document.getElementById(`subject-${id}`);
+            const input = li.querySelector('.subject-name-input');
+            const div = li.querySelector('div');
+            input.outerHTML = `<span class="subject-name">${name}</span>`;
+            div.innerHTML = `
+                <button class="btn btn-sm btn-warning me-2" onclick="startEditSubject(${id}, '${name}')">Sửa</button>
+                <button class="btn btn-sm btn-danger" onclick="deleteSubject(${id})">Xóa</button>
+            `;
+        }
+
+        function addSubject() {
+            let name = document.getElementById("newSubject").value.trim();
+            if (!name) {
+                Swal.fire("Lỗi", "Tên môn học không được trống!", "error");
+                return;
+            }
+            fetch("/api/subjects", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name })
+            })
+            .then(r => r.json())
+            .then(sub => {
+                let li = `<li class="list-group-item d-flex justify-content-between align-items-center" id="subject-${sub.id}">
+                            <span class="subject-name">${sub.name}</span>
+                            <div>
+                                <button class="btn btn-sm btn-warning me-2" onclick="startEditSubject(${sub.id}, '${sub.name}')">Sửa</button>
+                                <button class="btn btn-sm btn-danger" onclick="deleteSubject(${sub.id})">Xóa</button>
+                            </div>
+                          </li>`;
+                document.getElementById("subjectList").insertAdjacentHTML("beforeend", li);
+                document.getElementById("newSubject").value = "";
+                document.querySelector("thead tr").insertAdjacentHTML("beforeend", `<th>${sub.name}</th>`);
+                document.querySelectorAll("#studentTableBody tr").forEach(row => row.insertAdjacentHTML("beforeend", "<td>0</td>"));
+            });
+        }
+
+        function deleteSubject(id) {
+            Swal.fire({
+                title: "Bạn có chắc chắn?",
+                text: "Môn học này sẽ bị xóa!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Xóa",
+                cancelButtonText: "Hủy"
+            }).then(r => {
+                if (r.isConfirmed) {
+                    fetch(`/api/subjects/${id}`, { method: "DELETE" })
+                    .then(r => r.json())
+                    .then(res => {
+                        if (res.success) {
+                            const name = document.querySelector(`#subject-${id} .subject-name`).textContent;
+                            document.getElementById(`subject-${id}`).remove();
+                            const idx = [...document.querySelectorAll('thead th')].findIndex(th => th.textContent === name);
+                            if (idx !== -1) {
+                                document.querySelector(`thead th:nth-child(${idx+1})`).remove();
+                                document.querySelectorAll(`#studentTableBody tr td:nth-child(${idx+1})`).forEach(td => td.remove());
+                            }
+                            Swal.fire("Thành công", "Đã xóa môn học!", "success");
+                        } else {
+                            Swal.fire("Lỗi", res.message || "Xóa thất bại", "error");
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+}

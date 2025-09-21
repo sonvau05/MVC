@@ -1,0 +1,249 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\controller\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\controller\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\model\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\model\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\controller\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\controller\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\model\\studentmark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\model\\studentmark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\wwwroot\\css\\site.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\wwwroot\\css\\site.css||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\controller\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\controller\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|c:\\users\\loq\\source\\repos\\studentmarksmvc\\studentmarksmvc\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3489DB-A5C5-46B4-8A7C-9B581728BE6F}|StudentMarksMvc\\StudentMarksMvc.csproj|solutionrelative:studentmarksmvc\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "StudentMarksMvc\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAUwKoBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-20T13:25:33.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "StudentMarksMvc\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-20T13:16:01.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "StudentMarksMvc\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAACgAAAAAAAAAAAAwwEEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-20T13:15:32.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "StudentMarksMvc\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-20T13:14:20.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "StudentMarksMvc\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-20T13:13:48.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SubjectController.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Controller\\SubjectController.cs",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\Controller\\SubjectController.cs",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Controller\\SubjectController.cs",
+              "RelativeToolTip": "StudentMarksMvc\\Controller\\SubjectController.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAkwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T13:13:12.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Controller\\StudentsController.cs",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\Controller\\StudentsController.cs",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Controller\\StudentsController.cs",
+              "RelativeToolTip": "StudentMarksMvc\\Controller\\StudentsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T13:12:34.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Controller\\HomeController.cs",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\Controller\\HomeController.cs",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Controller\\HomeController.cs",
+              "RelativeToolTip": "StudentMarksMvc\\Controller\\HomeController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T13:12:13.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudentMark.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Model\\StudentMark.cs",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\Model\\StudentMark.cs",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Model\\StudentMark.cs",
+              "RelativeToolTip": "StudentMarksMvc\\Model\\StudentMark.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T13:11:50.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Subject.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Model\\Subject.cs",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\Model\\Subject.cs",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Model\\Subject.cs",
+              "RelativeToolTip": "StudentMarksMvc\\Model\\Subject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T13:11:33.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Model\\Student.cs",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\Model\\Student.cs",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Model\\Student.cs",
+              "RelativeToolTip": "StudentMarksMvc\\Model\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T13:11:17.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "StudentMarksMvc\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T13:10:52.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\appsettings.json",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\appsettings.json",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\appsettings.json",
+              "RelativeToolTip": "StudentMarksMvc\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-20T13:10:05.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Program.cs",
+              "RelativeDocumentMoniker": "StudentMarksMvc\\Program.cs",
+              "ToolTip": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\Program.cs",
+              "RelativeToolTip": "StudentMarksMvc\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T13:09:50.034Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

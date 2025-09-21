@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "Hash": "rK2IKHkEFSIi+se9IrrQ2m7Ib9Q9gknlkhupcL3fa3Y=",
+  "Source": "StudentMarksMvc",
+  "BasePath": "_content/StudentMarksMvc",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "StudentMarksMvc\\wwwroot",
+      "Source": "StudentMarksMvc",
+      "ContentRoot": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\wwwroot\\",
+      "BasePath": "_content/StudentMarksMvc",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\wwwroot\\css\\site.css",
+      "SourceId": "StudentMarksMvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\wwwroot\\",
+      "BasePath": "_content/StudentMarksMvc",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yoxkybty3m",
+      "Integrity": "blogGv9GkkS4GxIDXbpyG9/7asBp7rHOkNpGrUGv/eM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\wwwroot\\js\\site.js",
+      "SourceId": "StudentMarksMvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\wwwroot\\",
+      "BasePath": "_content/StudentMarksMvc",
+      "RelativePath": "js/site#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j1ka9tfjdm",
+      "Integrity": "CY+Xjk1cP3a9AnfeOT937VY3QGMkh8hnpwwBa72+eys=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"blogGv9GkkS4GxIDXbpyG9/7asBp7rHOkNpGrUGv/eM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 13:21:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-blogGv9GkkS4GxIDXbpyG9/7asBp7rHOkNpGrUGv/eM="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.yoxkybty3m.css",
+      "AssetFile": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"blogGv9GkkS4GxIDXbpyG9/7asBp7rHOkNpGrUGv/eM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 13:21:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yoxkybty3m"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-blogGv9GkkS4GxIDXbpyG9/7asBp7rHOkNpGrUGv/eM="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.j1ka9tfjdm.js",
+      "AssetFile": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3570"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CY+Xjk1cP3a9AnfeOT937VY3QGMkh8hnpwwBa72+eys=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 13:21:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j1ka9tfjdm"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CY+Xjk1cP3a9AnfeOT937VY3QGMkh8hnpwwBa72+eys="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "C:\\Users\\LOQ\\source\\repos\\StudentMarksMvc\\StudentMarksMvc\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3570"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CY+Xjk1cP3a9AnfeOT937VY3QGMkh8hnpwwBa72+eys=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 13:21:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CY+Xjk1cP3a9AnfeOT937VY3QGMkh8hnpwwBa72+eys="
+        }
+      ]
+    }
+  ]
+}
