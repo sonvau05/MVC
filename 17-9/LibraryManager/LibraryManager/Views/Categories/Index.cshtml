@@ -1,0 +1,169 @@
+﻿@model List<LibraryManager.Models.Category>
+@{
+    ViewData["Title"] = "Quản lý Thể loại";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-primary">Quản lý Thể loại</h2>
+
+    <div class="input-group mb-3">
+        <input type="text" id="newCategory" class="form-control" placeholder="Nhập tên thể loại..." />
+        <button class="btn btn-success" id="btnAdd"><i class="bi bi-plus-circle"></i> Thêm</button>
+    </div>
+
+    <div id="alertMessage" class="alert d-none"></div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered align-middle" id="categoryTable">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Tên thể loại</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr data-id="@item.Id">
+                        <td>@item.Id</td>
+                        <td class="name">@item.Name</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm btnEdit"><i class="bi bi-pencil"></i> Sửa</button>
+                            <button class="btn btn-danger btn-sm btnDelete"><i class="bi bi-trash"></i> Xóa</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal sửa -->
+<div class="modal fade" id="editModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sửa Thể loại</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="editId" />
+                <div class="mb-3">
+                    <label class="form-label">Tên thể loại</label>
+                    <input type="text" id="editName" class="form-control" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-primary" id="btnSaveEdit">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal xóa -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Xác nhận xóa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Bạn có chắc muốn xóa <strong id="deleteName"></strong>?</p>
+                <input type="hidden" id="deleteId" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-danger" id="btnConfirmDelete">Xóa</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function showAlert(message, type) {
+            $("#alertMessage").removeClass("d-none alert-success alert-danger")
+                .addClass(`alert-${type}`).text(message);
+            setTimeout(() => $("#alertMessage").addClass("d-none"), 3000);
+        }
+
+        // ========== Thêm ==========
+        $("#btnAdd").click(function () {
+            let name = $("#newCategory").val().trim();
+            if (!name) {
+                showAlert("Tên thể loại không được để trống", "danger");
+                return;
+            }
+            $.post("/Categories/CreateAjax", { name }, function (res) {
+                if (res.success) {
+                    $("#categoryTable tbody").append(`
+                        <tr data-id="${res.data.id}">
+                            <td>${res.data.id}</td>
+                            <td class="name">${res.data.name}</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm btnEdit"><i class="bi bi-pencil"></i> Sửa</button>
+                                <button class="btn btn-danger btn-sm btnDelete"><i class="bi bi-trash"></i> Xóa</button>
+                            </td>
+                        </tr>`);
+                    $("#newCategory").val("");
+                    showAlert("Thêm thành công!", "success");
+                } else {
+                    showAlert("Lỗi khi thêm", "danger");
+                }
+            });
+        });
+
+        // ========== Sửa ==========
+        let editModal = new bootstrap.Modal(document.getElementById("editModal"));
+        $(document).on("click", ".btnEdit", function () {
+            let row = $(this).closest("tr");
+            $("#editId").val(row.data("id"));
+            $("#editName").val(row.find(".name").text());
+            editModal.show();
+        });
+
+        $("#btnSaveEdit").click(function () {
+            let id = $("#editId").val();
+            let name = $("#editName").val().trim();
+            if (!name) {
+                showAlert("Tên không được để trống", "danger");
+                return;
+            }
+            $.post("/Categories/EditAjax", { id, name }, function (res) {
+                if (res.success) {
+                    $(`#categoryTable tr[data-id=${id}] .name`).text(name);
+                    editModal.hide();
+                    showAlert("Sửa thành công!", "success");
+                } else {
+                    showAlert("Lỗi khi sửa", "danger");
+                }
+            });
+        });
+
+        // ========== Xóa ==========
+        let deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
+        $(document).on("click", ".btnDelete", function () {
+            let row = $(this).closest("tr");
+            $("#deleteId").val(row.data("id"));
+            $("#deleteName").text(row.find(".name").text());
+            deleteModal.show();
+        });
+
+        $("#btnConfirmDelete").click(function () {
+            let id = $("#deleteId").val();
+            $.post("/Categories/DeleteAjax", { id }, function (res) {
+                if (res.success) {
+                    $(`#categoryTable tr[data-id=${id}]`).remove();
+                    deleteModal.hide();
+                    showAlert("Xóa thành công!", "success");
+                } else {
+                    showAlert("Lỗi khi xóa", "danger");
+                }
+            });
+        });
+    </script>
+}

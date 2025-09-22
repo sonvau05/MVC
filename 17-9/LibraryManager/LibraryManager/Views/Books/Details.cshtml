@@ -1,0 +1,13 @@
+﻿@model LibraryManager.Models.Book
+
+<div>
+    <h5>@Model.Title</h5>
+    <p><strong>Tác giả:</strong> @Model.Author</p>
+    <p><strong>Năm xuất bản:</strong> @Model.PublicationYear</p>
+    <p><strong>Số lượng:</strong> @Model.Quantity</p>
+    <p><strong>Thể loại:</strong> @Model.Category?.Name</p>
+
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        <i class="bi bi-arrow-left"></i> Đóng
+    </button>
+</div>

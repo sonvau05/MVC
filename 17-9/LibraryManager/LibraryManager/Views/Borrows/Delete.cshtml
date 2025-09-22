@@ -1,0 +1,32 @@
+﻿@model LibraryManager.Models.Borrow
+
+@{
+    ViewData["Title"] = "Xóa mượn sách";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="text-danger">Xóa mượn sách</h2>
+    <div class="card shadow-sm p-4">
+        <p>Bạn có chắc chắn muốn xóa bản ghi mượn sách sau?</p>
+        <dl class="row">
+            <dt class="col-sm-3">Sách</dt>
+            <dd class="col-sm-9">@Model.Book?.Title</dd>
+
+            <dt class="col-sm-3">Người mượn</dt>
+            <dd class="col-sm-9">@Model.BorrowerName</dd>
+
+            <dt class="col-sm-3">Ngày mượn</dt>
+            <dd class="col-sm-9">@Model.BorrowDate.ToString("dd/MM/yyyy")</dd>
+        </dl>
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger">
+                <i class="bi bi-trash"></i> Xóa
+            </button>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-x-circle"></i> Hủy
+            </a>
+        </form>
+    </div>
+</div>

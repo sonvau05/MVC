@@ -1,0 +1,44 @@
+﻿body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    transition: transform 0.2s;
+    border-radius: 10px;
+}
+
+    .card:hover {
+        transform: scale(1.01);
+    }
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table thead th {
+    background-color: #343a40;
+    color: white;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+}
+
+.pagination .page-link {
+    border-radius: 5px;
+    margin: 0 3px;
+}
+
+.pagination .active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.input-group .form-control {
+    border-radius: 5px 0 0 5px;
+}
+
+.input-group .btn {
+    border-radius: 0 5px 5px 0;
+}

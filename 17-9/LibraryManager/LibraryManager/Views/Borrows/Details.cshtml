@@ -1,0 +1,25 @@
+﻿@model LibraryManager.Models.Borrow
+
+@{
+    ViewData["Title"] = "Chi tiết mượn sách";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="text-primary">Chi tiết mượn sách</h2>
+    <div class="card shadow-sm p-4">
+        <dl class="row">
+            <dt class="col-sm-3">Sách</dt>
+            <dd class="col-sm-9">@Model.Book?.Title</dd>
+
+            <dt class="col-sm-3">Người mượn</dt>
+            <dd class="col-sm-9">@Model.BorrowerName</dd>
+
+            <dt class="col-sm-3">Ngày mượn</dt>
+            <dd class="col-sm-9">@Model.BorrowDate.ToString("dd/MM/yyyy")</dd>
+        </dl>
+        <a href="/Borrows/Index" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Quay lại
+        </a>
+    </div>
+</div>

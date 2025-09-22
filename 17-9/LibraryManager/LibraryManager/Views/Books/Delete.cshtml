@@ -1,0 +1,11 @@
+﻿@model LibraryManager.Models.Book
+
+<div>
+    <p>Bạn có chắc chắn muốn xóa <strong>@Model.Title</strong> (Tác giả: @Model.Author)?</p>
+    <button type="button" class="btn btn-danger" id="confirmDeleteBtn" data-id="@Model.Id">
+        <i class="bi bi-trash"></i> Xóa
+    </button>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        <i class="bi bi-x-circle"></i> Hủy
+    </button>
+</div>

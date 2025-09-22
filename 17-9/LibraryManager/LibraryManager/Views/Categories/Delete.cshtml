@@ -1,0 +1,18 @@
+﻿@model LibraryManager.Models.Category
+
+@{
+    ViewData["Title"] = "Xóa Thể loại";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2>Xóa Thể loại</h2>
+    <div class="card shadow-sm p-4">
+        <p class="mt-4">Bạn có chắc muốn xóa <strong>@Model.Name</strong>?</p>
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i> Xóa</button>
+            <a asp-action="Index" class="btn btn-secondary"><i class="bi bi-x-circle"></i> Hủy</a>
+        </form>
+    </div>
+</div>
